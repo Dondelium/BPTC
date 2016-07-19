@@ -1,15 +1,23 @@
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.HashMap;
 /**
  * Created by Dondelium on 7/13/2016.
  */
 public class BlockDefinitions{
-    public HashMap<String, BlockComponent> blocks = new HashMap<String, BlockComponent>();
+    public Map<String, BlockComponent> blocks;
     public BlockDefinitions(){
         generateDefintions();
     }
 
+    public void addDefinition(String name, ArrayList<String> comps, ArrayList<Integer> amounts){
+        if(blocks.containsKey(name))
+            blocks.remove(name);
+        blocks.put(name, new BlockComponent(comps, amounts));
+    }
+
     private void generateDefintions(){
+        blocks = new HashMap<>();
         ArrayList<String> tempNames = new ArrayList<String>();
         ArrayList<Integer> tempNums = new ArrayList<Integer>();
 

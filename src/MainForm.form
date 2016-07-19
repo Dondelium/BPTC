@@ -1,54 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainForm">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="1" vgap="1">
-    <margin top="3" left="3" bottom="3" right="3"/>
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="10" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="3" vgap="3">
+    <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
-      <xy x="20" y="20" width="892" height="600"/>
+      <xy x="20" y="20" width="892" height="682"/>
     </constraints>
     <properties>
       <background color="-8882056"/>
-      <maximumSize width="1600" height="900"/>
-      <minimumSize width="300" height="200"/>
+      <focusCycleRoot value="false"/>
+      <inheritsPopupMenu value="false"/>
+      <maximumSize width="1400" height="1200"/>
+      <minimumSize width="300" height="250"/>
       <name value="mainPanel"/>
-      <preferredSize width="800" height="600"/>
+      <preferredSize width="800" height="650"/>
     </properties>
     <border type="none"/>
     <children>
       <component id="c2cc3" class="javax.swing.JTextField" binding="bpName">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
           <disabledTextColor color="-6710887"/>
-          <editable value="true"/>
+          <editable value="false"/>
+          <enabled value="true"/>
         </properties>
       </component>
       <component id="f2662" class="javax.swing.JButton" binding="selectBP">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-8882056"/>
+          <background color="-12828863"/>
+          <contentAreaFilled value="true"/>
+          <foreground color="-6710887"/>
           <text value="Select Blueprint"/>
         </properties>
       </component>
       <component id="9448e" class="javax.swing.JTextArea" binding="bpCompsOutput">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-12828863"/>
+          <editable value="false"/>
+          <foreground color="-6710887"/>
+          <requestFocusEnabled value="true"/>
+        </properties>
       </component>
-      <component id="ea3b3" class="javax.swing.JButton" binding="exitButton">
+      <component id="96ef4" class="javax.swing.JTextArea" binding="defOutput">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="7" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <editable value="false"/>
+          <foreground color="-6710887"/>
+        </properties>
+      </component>
+      <component id="4fab9" class="javax.swing.JTextField" binding="defName">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+        </properties>
+      </component>
+      <component id="7a022" class="javax.swing.JButton" binding="selectDef">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-12828863"/>
+          <contentAreaFilled value="true"/>
+          <foreground color="-6710887"/>
+          <text value="Select file"/>
+        </properties>
+      </component>
+      <component id="7e70b" class="javax.swing.JRadioButton" binding="radioVanilla">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-8882056"/>
+          <text value="Select vanilla data folder."/>
+        </properties>
+      </component>
+      <component id="9b7b6" class="javax.swing.JRadioButton" binding="radioMod">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-8882056"/>
+          <selected value="false"/>
+          <text value="Select mod folder."/>
+        </properties>
+      </component>
+      <component id="41d29" class="javax.swing.JRadioButton" binding="radioLocal">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-8882056"/>
+          <text value="Select local file to load."/>
+        </properties>
+      </component>
+      <component id="2e9d" class="javax.swing.JButton" binding="defLoadButton">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <foreground color="-6710887"/>
+          <text value="Load Definitions"/>
+        </properties>
+      </component>
+      <component id="c55c9" class="javax.swing.JButton" binding="defsSaveButton">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <foreground color="-6710887"/>
+          <text value="Save Definitions"/>
+        </properties>
+      </component>
+      <component id="5e4ec" class="javax.swing.JButton" binding="defsClearButton">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <foreground color="-6710887"/>
+          <text value="Clear Defintions"/>
+        </properties>
+      </component>
+      <component id="5af05" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Definitions workspace."/>
+        </properties>
+      </component>
+      <component id="ea3b3" class="javax.swing.JButton" binding="exitButton">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <foreground color="-6710887"/>
           <text value="Exit"/>
+        </properties>
+      </component>
+      <component id="10c3d" class="javax.swing.JCheckBox" binding="cbExtract">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-8882056"/>
+          <selected value="true"/>
+          <text value="Auto-extract files on open"/>
+        </properties>
+      </component>
+      <component id="784c4" class="javax.swing.JCheckBox" binding="cbLoad">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-8882056"/>
+          <text value="Auto-load definitions on open"/>
         </properties>
       </component>
     </children>
