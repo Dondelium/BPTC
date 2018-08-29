@@ -545,12 +545,12 @@
 		STARBASE_ORBIT_DISTANCE = 15.0		# how far from the star starbases will orbit
 		PLANET_DESTROYER_OFFENSIVE_SHIP_OFFSET = { 0.0 0.0 10.0 }
 
-		BASE_SURVEY_TIME 		= 20.0				# Base Time In Days for surveying a planet
+		BASE_SURVEY_TIME 		= 10.0				# Base Time In Days for surveying a planet
 
-		LEADER_POOL_SIZE		= 3				# Each leader pool will consist of this many leaders
+		LEADER_POOL_SIZE		= 9				# Each leader pool will consist of this many leaders
 		LEADER_POOL_LEAD_TIME	= 10				# Years leaders will remain in the leader pool until replaced
-		LEADER_HIRING_COST 		= 200
-		LEADER_BASE_CAP			= 10
+		LEADER_HIRING_COST 		= 50
+		LEADER_BASE_CAP			= 1000
 		LEADER_EXPERIENCE_INIT_RAND_MOD 	= 0.35
 		LEADER_EXPERIENCE_INIT_ADD 			= 0.25
 		LEADER_BASE_SKILL_CAP	= 5
@@ -590,10 +590,10 @@
 		LEADER_GOVERNOR_POP_IS_BORN_EXPERIENCE						= 8 # Exp-gain for each Pop born
 		LEADER_GOVERNOR_SECTOR_MONTHLY_EXPERIENCE					= 3.5	# Monthy exp from governing sector.
 
-		LEADER_AGE_DEATH_CHANCE_AGE	= 80			# Before this age the chance wont increase
-		LEADER_AGE_DEATH_CHANCE_INC = 0.002			# Increase with these % for each year above CHANCE_AGE
-		LEADER_AGE_HIGH_DEATH_CHANCE_AGE = 100		# Above this age, death chance increases drastically
-		LEADER_AGE_HIGH_DEATH_CHANCE_INC = 0.02		# Increase with these % for each year above HIGH_DEATH_CHANCE_AGE
+		LEADER_AGE_DEATH_CHANCE_AGE	= 250			# Before this age the chance wont increase
+		LEADER_AGE_DEATH_CHANCE_INC = 0.001			# Increase with these % for each year above CHANCE_AGE
+		LEADER_AGE_HIGH_DEATH_CHANCE_AGE = 300		# Above this age, death chance increases drastically
+		LEADER_AGE_HIGH_DEATH_CHANCE_INC = 0.03		# Increase with these % for each year above HIGH_DEATH_CHANCE_AGE
 		
 		GENERAL_DAMAGE_EXP_MULT		= 1.0				# Multiplier of how much damage translates into experience.
 		GENERAL_DEFENSE_EXP_MULT	= 1.0				# Multiplier of how much defense translates into experience.
@@ -629,7 +629,7 @@
 		NEXT_ELECTION_MESSAGE_DAYS		    = 90 	# Days player can choose a new ruler from new election date
 		NEW_RULER_MESSAGE_DAYS				= 45 	# Days player can see message of new ruler
 
-		ETHOS_MAX_POINTS					= 3	# Number of points which you can spend on ethos.
+		ETHOS_MAX_POINTS					= 5	# Number of points which you can spend on ethos.
 		ETHOS_DISTRIBUTION_FACTOR 			= 0.5	# The higher this is the more evenly ethics will be distributed among playable empires
 
 		GOVERNMENT_CIVIC_POINTS_BASE		= 2		# Base amount of civic points (to "pay" for government civic costs)
@@ -643,7 +643,7 @@
 		POP_CHANGE_FACTION_CHANCE					= 0.02	# Once every month a pop has X chance to change faction but only if the pop wants to
 		POP_CURRENT_FACTION_WEIGHT					= 1.25	# Weight for current faction is multiplied by this much for pops
 		POP_CURRENT_FACTION_LAST_MEMBER_WEIGHT		= 100.0	# Weight for current faction is multiplied by this much for pops when they are the last faction member
-		POP_FACTION_HAPPINESS_FOR_CONTENT			= 0.4	# Below this level of happines a faction will start causing trouble
+		POP_FACTION_HAPPINESS_FOR_CONTENT			= 0.05	# Below this level of happines a faction will start causing trouble
 		POP_FACTION_MIN_HAPPINESS_FOR_INFLUENCE		= 0.6	# Above this level of happiness a faction provides +influence
 		POP_FACTION_INFLUENCE_SCALING				= 2	# Base influence gained from a faction being at 100% happiness and 100% support
 		POP_FACTION_SIZE_ATTRACTION					= 1	# How much does the current size of membership affect attraction (higher number = lower attraction when large)
@@ -831,8 +831,8 @@
 		TECH_WEIGHT_POTENTIAL_ADD				= 0
 		TECH_RESEARCH_NO_LEADER_PENALTY			= -0.25
 		TECH_COST_MULT_FALLEN_EMPIRE			= 2	# Awakened Empires pay this much more to research techs
-		TECH_COST_MULT_NUM_SYSTEMS				= 0.01 # Each System adds +X% tech cost
-		TECH_COST_MULT_NUM_COLONIES				= 0.05 # Each Planet adds +X% tech cost
+		TECH_COST_MULT_NUM_SYSTEMS				= 0.0 # Each System adds +X% tech cost
+		TECH_COST_MULT_NUM_COLONIES				= 0.0 # Each Planet adds +X% tech cost
 		TECH_COST_FREE_POPS						= 10 # First X pops do not add any tech cost
 		TECH_COST_MULT_NUM_POPS					= 0.0 # Each non-free Pop adds +X% tech cost
 		TECH_WEIGHT_PREVIOUS_OPTION				= 0.5	# If a tech was one of the alternatives last time its weight will be multiplied with TECH_WEIGHT_PREVIOUS_OPTION
@@ -841,8 +841,8 @@
 		TRADITION_COST_TRADITION				= 7			# change this value if you want to increase all costs
 		TRADITION_COST_TRADITION_EXP			= 1.639 	# change this value if you want to increase costs at the end
 		TRADITION_COST_MULT_TRADITION_GROUP		= 0.05		# each adopted group adds +X% to total cost	
-		TRADITION_COST_MULT_NUM_COLONIES		= 0.20		# Each Planet adds +X% Tradition cost
-		TRADITION_COST_MULT_NUM_SYSTEMS			= 0.01		# Each System adds +X% Tradition cost	
+		TRADITION_COST_MULT_NUM_COLONIES		= 0.0		# Each Planet adds +X% Tradition cost
+		TRADITION_COST_MULT_NUM_SYSTEMS			= 0.0		# Each System adds +X% Tradition cost	
 
 		KEYBOARD_DOUBLE_CLICK_TIME				= 0.5	# Seconds listening to control group double clicks.
 
@@ -853,7 +853,7 @@
 
 		MISSION_PROGRESS_MAX					= 1	# When is a mission finished?
 
-		CORE_SECTOR_SYSTEM_CAP					= 3	# Too many systems with owned planets in core sector will apply modifier inefficient_planet_management.
+		CORE_SECTOR_SYSTEM_CAP					= 100	# Too many systems with owned planets in core sector will apply modifier inefficient_planet_management.
 		SECTOR_CAP								= 2	# Too many sectors will apply modifier inefficient_sector_management.
 		SECTOR_CAP_INCR							= 0.25	# 0.25 means that for every four planets an extra sector can be created.
 		SECTOR_SUPPORT_RESOURCE_AMOUNT_LARGE	= 1000 	# How much resources each click will give the sector if CTRL is held down
@@ -907,13 +907,13 @@
 		COMMAND_LIMIT_BASE 										= 20	# Base value of Command Limit
 		
 		NAVAL_CAPACITY_MAX										= 9999	# Max value of Naval Capacity
-		NAVAL_CAPACITY_BASE 									= 20	# Base value of Naval Capacity
-		NAVAL_CAPACITY_POP_MULT									= 0.10	# Mult value of Naval Capacity for each Pop
+		NAVAL_CAPACITY_BASE 									= 50	# Base value of Naval Capacity
+		NAVAL_CAPACITY_POP_MULT									= 0.50	# Mult value of Naval Capacity for each Pop
 		
 		STARBASE_CAPACITY_MAX									= 999	# Max value of Starbase Capacity
-		STARBASE_CAPACITY_BASE 									= 3		# Base value of Starbase Capacity
-		STARBASE_CAPACITY_SYSTEM_MULT							= 0.05	# Mult value of Starbase Capacity for each owned system	
-		STARBASE_CAPACITY_POP_MULT								= 0.025	# Mult value of Starbase Capacity for each Pop	
+		STARBASE_CAPACITY_BASE 									= 1		# Base value of Starbase Capacity
+		STARBASE_CAPACITY_SYSTEM_MULT							= 0.25	# Mult value of Starbase Capacity for each owned system	
+		STARBASE_CAPACITY_POP_MULT								= 0.1	# Mult value of Starbase Capacity for each Pop	
 
 		STARBASE_BASE_LEVEL				= "starbase_level_outpost"		# The base starbase level
 		UPGRADED_STARBASE_BASE_LEVEL	= "starbase_level_starport"		# The first starbase level you upgrade to
@@ -923,9 +923,9 @@
 
 		PLANET_UNREST_MAX					= 100	# Planetary unrest is capped at this value
 		PLANET_UNREST_BAD_MIN				= 50	# Threshold for when the alert is shown
-		PLANET_UNREST_HAPPY_POP				= -5	# Max. effect of happy not enslaved pops on planetary unrest
+		PLANET_UNREST_HAPPY_POP				= -20	# Max. effect of happy not enslaved pops on planetary unrest
 		PLANET_UNREST_UNHAPPY_POP			= 20		# Max. effect of unhappy not enslaved pops on planetary unrest
-		PLANET_UNREST_HAPPY_SLAVE			= 0		# Max. effect of happy enslaved pops on planetary unrest
+		PLANET_UNREST_HAPPY_SLAVE			= 15		# Max. effect of happy enslaved pops on planetary unrest
 		PLANET_UNREST_UNHAPPY_SLAVE			= 15		# Max. effect of unhappy enslaved pops on planetary unrest
 		
 		EVADE_HOSTILE_CANCEL_ORDERS_THRESHOLD_DAYS = 180 # When evading hostiles ships will cancel orders that would take more than X days to reach.
@@ -941,8 +941,8 @@
 		MIN_ETHIC_POINTS 					= 3
 		MAX_ETHIC_POINTS 					= 3
 
-		MAX_TRAIT_POINTS_LEADER				= 1		# How many trait points a leader can have
-		MAX_TRAIT_POINTS_RULER				= 2
+		MAX_TRAIT_POINTS_LEADER				= 3		# How many trait points a leader can have
+		MAX_TRAIT_POINTS_RULER				= 6
 
 		TRAIT_MODIFICATION_BASE_COST 		= 5000		# This cost is always added to a species modification project so modifying single pops isn't efficient
 		TRAIT_CLIMATE_MODIFICATION_COST		= 3
@@ -968,13 +968,13 @@
 		DESIGNER_WEAPON_PREF_MUL			= 1.33			# How much does weapon preference tags in the ship designer affect the weight it assigns a weapon?
 		DESIGNER_WEAPON_STACKING_DIV		= 0.25			# The higher this is the more the ship designer will try to vary which weapon types are used on its sections
 		
-		ENERGY_MAINTENANCE_MUL				= 0.005		# Ship Maintenance Multiplier Percentage of the cost of the ship
-		MINERAL_MAINTENANCE_MUL				= 0.010		# Ship Maintenance Multiplier Percentage of the cost of the ship
-		ABANDONED_STATION_DECAY_RATE		= 0.003		# Abandoned stations lose this amount of health per day
-		POOR_MAINTENANCE_PENALTY			= 0.01		# 1% percent max hit points penalty each day for poor maintenance (energy < 0)
+		ENERGY_MAINTENANCE_MUL				= 0.000	    # Ship Maintenance Multiplier Percentage of the cost of the ship
+		MINERAL_MAINTENANCE_MUL				= 0.001		# Ship Maintenance Multiplier Percentage of the cost of the ship
+		ABANDONED_STATION_DECAY_RATE		= 0.002		# Abandoned stations lose this amount of health per day
+		POOR_MAINTENANCE_PENALTY			= 0.002		# 1% percent max hit points penalty each day for poor maintenance (energy < 0)
 		
-		FALLEN_EMPIRE_MAINTENANCE_MULT		= 0.25
-		AWAKENED_FALLEN_EMPIRE_MAINTENANCE_MULT		= 0.5
+		FALLEN_EMPIRE_MAINTENANCE_MULT		= 1
+		AWAKENED_FALLEN_EMPIRE_MAINTENANCE_MULT		= 1
 		AWAKENED_FALLEN_EMPIRE_NAVAL_PLANET_MIN 	= 10
 		
 		STRIKE_CRAFT_COMBAT_REGEN 			= 0.2
@@ -1010,7 +1010,7 @@
 		FLEET_FORMATION_CIRCLE_SHIPS_PER_LAYER_MULT = 4
 		FLEET_FORMATION_CIRCLE_RADIUS_PER_LAYER_MULT = 2.0
 
-		LANDING_TIME_DAYS					= 10	# Amount of days it takes to land an army
+		LANDING_TIME_DAYS					= 1		# Amount of days it takes to land an army
 
 		MOVE_TO_ACTION_THRESHOLD			= 5.0	# distance threshold used by move_to fleet action to determine when the fleet arrived
 
@@ -1050,9 +1050,9 @@
 		EXCESS_POWER_BONUS_THRESHOLD_MIN	= 0.05 # min value for excess power to be used.
 		
 		SHIP_EXP_GAIN_COMBAT			= 1.0				# Gained each day ship is in combat
-		SHIP_EXP_EXPERIENCED			= 100				# Amount of exp to reach experienced rank
-		SHIP_EXP_VETERAN				= 1000				# Amount of exp to reach veteran rank
-		SHIP_EXP_ELITE					= 10000				# Amount of exp to reach elite rank
+		SHIP_EXP_EXPERIENCED			= 50				# Amount of exp to reach experienced rank
+		SHIP_EXP_VETERAN				= 500				# Amount of exp to reach veteran rank
+		SHIP_EXP_ELITE					= 5000				# Amount of exp to reach elite rank
 
 		CAN_TRAVEL_BETWEEN_UNEXPLORED_SYSTEMS = no		# Can move between 2 unexplored systems
 	}
